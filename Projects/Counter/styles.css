@@ -1,0 +1,32 @@
+*{
+    margin: 10px;
+    padding: 10px;
+    border: 10px;
+}
+.button{
+    background-color: blue;
+    color: azure;
+    border-radius: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-color: beige;font-weight: bold;
+}
+button:hover{
+    background-color: green;
+    font-family: cursive;
+}
+
+.button-pannel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+.valdisplay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 3em;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}

@@ -1,0 +1,17 @@
+.calculator{
+    display: grid;
+    position: relative;
+}
+.display{
+    grid-row: 4;
+    position: relative;
+}
+.num{
+    grid-row: 4;
+    position:relative
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
