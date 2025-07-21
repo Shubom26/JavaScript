@@ -1831,3 +1831,92 @@
 // Similar to an array, but no (Map, FileSystemEntry, reduce)
 // NodeList wont update automatically reflect changes. 
 
+
+// CALLBACK HELL 
+// Callback hell = Situation in JavaScript where callBacks are nested with other call backs to the degree where the code is difficult to read. Old patern to handle asynchronous functions. 
+// Use Promises + async/await to avoid Callback Hell 
+// function task1(callback){
+//     setTimeout(() => {
+//         console.log(`Task 1 complete`);
+//         callback();
+//     }, 2000);
+// }
+// function task2(callback){
+//     setTimeout(() => {
+//         console.log(`Task 2 complete`);
+//         callback();
+//     }, 1000);
+// }
+// function task3(callback){
+//     setTimeout(() => {
+//         console.log(`Task 3 complete`);
+//         callback();
+//     }, 3000);
+// }
+// function task4(callback){
+//     setTimeout(() => {
+//         console.log(`Task 4 complete`);
+//         callback();
+//     }, 4000);
+// }
+// function task5(callback){
+//     setTimeout(() => {
+//         console.log(`Task 5 complete`);
+//         callback();
+//     }, 2000);
+// }
+
+// // Execute tasks in order
+// task1(() => {
+//     task2(() => {
+//         task3(() => {
+//             task4(() => {
+//                 task5(() => {
+//                     console.log(`All Task Completed`);
+//                 });
+//             });
+//         });
+//     });
+// });
+
+// Promises in javascript
+
+// Promise = An object that manages asynchronous operations,
+// Wrap a Promise Object around {asynchronous  code}
+// "I Promise to return a value"
+// PENDING --> RESOLVED or RESERVED
+// new Promise((resolve, reject) => {asychronous code})
+
+// DO THESE CHORES IN ORDER 
+//  1. WALK THE DOG.
+//  2. CLEAN THE KITCEN.
+//  3. TAKE OUT THE TRASH. 
+
+// function walkdog(callback){
+//     setTimeout(()=>{
+//         console.log(`You walk the dog.`);
+//         callback();
+//     },1500);
+// }
+// function cleanKitchen(callback){
+//     setTimeout(()=>{
+//         console.log(`Kitchen cleaned.`);
+//         callback();
+//     },2500);
+    
+// }
+// function trashOut(callback){
+//     setTimeout(()=>{
+//         console.log(`You took out the trash`);
+//         callback();
+//     },500);
+    
+// }
+
+// walkdog(()=>{
+//     cleanKitchen(()=>{
+//         trashOut(()=>{
+//             console.log(`All task completed`);
+//         })
+//     })
+// })
