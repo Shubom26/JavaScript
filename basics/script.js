@@ -1767,10 +1767,10 @@
 // ERROR HANDELING IN JAVASCRIPT
 
 // Error =An object that is createed to reporesent a problem that occurs 
-            // occurs often with user input or establishing a connection.
-            // try{}
-            // catch{}
-            // finally{}
+// occurs often with user input or establishing a connection.
+// try{}
+// catch{}
+// finally{}
 
 // try{
 //     console.log(x);
@@ -1903,14 +1903,14 @@
 //         console.log(`Kitchen cleaned.`);
 //         callback();
 //     },2500);
-    
+
 // }
 // function trashOut(callback){
 //     setTimeout(()=>{
 //         console.log(`You took out the trash`);
 //         callback();
 //     },500);
-    
+
 // }
 
 // walkdog(()=>{
@@ -1920,3 +1920,136 @@
 //         })
 //     })
 // })
+
+// function walkdog() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             const dogWalked = true;
+
+//             if (dogWalked) {
+//                 resolve(`You walk the dog.`);
+//             }
+//             else {
+//                 reject("You didn't walk the dog!");
+//             }
+//         }, 1500);
+//     })
+// }
+// function cleanKitchen() {
+//     return new Promise((resolve, reject) => {
+//         const kitchenCleaned = true;
+//         if (kitchenCleaned) {
+//             setTimeout(() => {
+//                 resolve(`Kitchen cleaned.`);
+//             }, 2500);
+//         }
+//         else {
+//             reject(`You didn't clean the kitchen.`)
+//         }
+//     })
+
+
+// }
+// function trashOut() {
+//     return new Promise((resolve, reject) => {
+//         const trashOut = false;
+//         if (trashOut) {
+//             setTimeout(() => {
+//                 resolve(`You moved the trash out.`);
+//             }, 2500);
+//         } else {
+//             reject(`Trash not thrown out.`);
+//         }
+//     });
+// }
+
+
+// walkdog().then(value => {
+//     console.log(value);
+//     return cleanKitchen();
+// }).then(value => {
+//     console.log(value);
+//     return trashOut();
+// }).then(value => {
+//     console.log(value);
+//     console.log(`All chores done.`)
+// }).catch(error => console.error(error));
+
+// ASYNC/AWAIT
+
+// Async/Await = Are two keywords in Javascript
+            // async = makes a function return a promise. 
+            // await = makes an async function wait for a promise.
+
+
+// function walkdog() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             const dogWalked = true;
+
+//             if (dogWalked) {
+//                 resolve(`You walk the dog.`);
+//             }
+//             else {
+//                 reject("You didn't walk the dog!");
+//             }
+//         }, 1500);
+//     })
+// }
+// function cleanKitchen() {
+//     return new Promise((resolve, reject) => {
+//         const kitchenCleaned = true;
+//         if (kitchenCleaned) {
+//             setTimeout(() => {
+//                 resolve(`Kitchen cleaned.`);
+//             }, 2500);
+//         }
+//         else {
+//             reject(`You didn't clean the kitchen.`)
+//         }
+//     })
+
+
+// }
+// function trashOut() {
+//     return new Promise((resolve, reject) => {
+//         const trashOut = true;
+//         if (trashOut) {
+//             setTimeout(() => {
+//                 resolve(`You moved the trash out.`);
+//             }, 2500);
+//         } else {
+//             reject(`Trash not thrown out.`);
+//         }
+//     });
+// }
+
+// async function toDoChores(){
+//     try{
+//         const walkdogResult = await walkdog();
+//     console.log(walkdogResult);
+
+//     const cleanKitchenResult = await cleanKitchen();
+//     console.log(cleanKitchenResult);
+
+//     const trashOutResult = await trashOut();
+//     console.log(trashOutResult);
+//     console.log(`All task completed`);
+//     }
+//     catch(error){
+//         console.error(error);
+//     }
+    
+
+// }
+
+// toDoChores();
+
+// JSON FILES IN JAVASCRIPT
+// JSON (Javascript Object Notation) its a data interchanging format used for exchanging data between a server and a web application
+// JSON files uses {key:values} or [value1, value2, value3]
+
+// JSON.stringify() = converts a JS object to a JSON string. 
+// JSON.parse() = converts a JSON string to JS object. 
+
+
